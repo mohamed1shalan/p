@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "coenraads.bracket-pair-colorizer-2",
+        "jeremyrajan.react-component",
+        "2gua.rainbow-brackets"
+    ]
+}

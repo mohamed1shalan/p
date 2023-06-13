@@ -1,0 +1,230 @@
+html,
+body{
+    background-color: #fffdf7;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Alegreya Sans',sans-serif; 
+    font-weight: 100;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration-line: none;
+    color: black;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(100 , 1fr);
+    grid-template-rows: repeat(100 , 1fr);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.amr-img{
+    grid-column: 1/ 51 ;
+    grid-row:  7 / 101 ;
+    overflow: hidden;
+    background-image: url(12.png);
+    background-size: cover;
+    background-position: center;
+    background-position-y: top;
+}
+.amr-img img{
+    height: 105%;
+    margin: -10px 0 0 -19px;
+    
+    
+}
+.amr-discription{
+    grid-column: span 50;
+    grid-row: span 100;
+    font-size: 1.121rem;
+    /* font-family: system-ui; */
+    /* word-spacing: 1px; */
+    line-height: 1.5;
+    overflow: auto;
+}
+
+.amr-discription h1{
+    text-transform: capitalize;
+    margin: 25px 0;
+    font-size: 27px;
+    color: #709968;
+}
+
+.amr-discription{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.amr-discription::-webkit-scrollbar{
+    display: none;
+}
+
+.bm{
+    padding: 111px 70px;
+}
+
+header{
+    background-color: rgb(239, 250, 235);
+    background: linear-gradient( 90deg,#f0faec , #fffdf7);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-template-rows: repeat(1 , 1fr);
+}
+
+.logo{
+    margin-left: 10px;
+    height: 50px;
+    width: 200px;
+    background-image: url(logo.png);
+    background-size: cover;
+
+}
+
+.a-ab{
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.a-fortune{
+    grid-column: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ab,.fortune{
+    font-size: 30px;
+    margin: 0
+
+}
+.fortune{
+    grid-column: 5;
+}
+
+.details-bm{
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+.details-bm div{
+    display: flex;
+    
+}
+.phone-gmail-bm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+}
+.name-bm{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.name-bm p{
+    position: relative;
+}
+.name-bm p::before{
+    content: "";
+    border: 11px solid red;
+    width: 0px;
+    border-color: red #709968  wheat;
+    color: white;
+    height: 0px;
+    position: absolute;
+    border-top: 11px solid #ffffff00;
+    border-right: 11px solid #ffffff00;
+    border-bottom: 11px solid #ffffff00;
+    top: 50%;
+    left: -23px;
+    margin-top: -7%;
+}
+
+.img-bm{
+    background-image: url(business-manager.jpg);
+    width: 308px;
+    height: 200px;
+    background-size: cover;
+    margin: 90px 0 0 211px;
+}
+@media (max-width:1286px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .a-ab, .a-fortune{
+        /* justify-content: left; */
+        /* color: #709968; */
+        /* background-color: white; */
+        /* width: 200px; */
+        display: none;
+    }
+    .div-h-s-w img,
+    .div-fortune-s-w img{
+        width: 35px;
+        padding: 2px 0;
+    }
+
+    .div-h-s-w,
+    .div-fortune-s-w{
+        width: 60px;
+        display: flex;
+        background-color: #f2f2f9;
+        height: fit-content;
+        justify-content: space-around;
+        border-radius: 0px 10px 10px 0px;
+        margin: 25px 0 0 -3px;
+        box-shadow: 0px 0px 20px #7e8190;
+    }
+}
+@media (min-width:1286px) {
+    .div-h-s-w,
+    .div-fortune-s-w{
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .amr-img{
+        display: none;
+    }
+    .amr-discription{
+        grid-column: span 100;
+    }
+    .img-bm{
+        margin: 60px auto auto auto;
+    }
+    .amr-discription h1{
+        font-size: 20px;
+    }
+    .bm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-gmail-bm{
+        margin: 0;
+    }
+    .details-bm{
+        flex-direction: column;
+    }
+
+}
+.gmail-bm a ,
+.phone-bm a{
+    color: #6567ff;
+}
