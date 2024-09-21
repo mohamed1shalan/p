@@ -1,22 +1,33 @@
-// Online C++ compiler to run C++ program online
-#include <iostream>
-#include <algorithm>
-#include <cmath>
-using namespace std;
+
+#include <bits/stdc++.h>
+
 int main() {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a>6 || a<2){
-        cout<<max(b,c);
+    int j;
+    std::cin >> j;
+    std::string character;
+    std::cin >> character;
+    std::string result = "";
+    for (int i = 97; i < (97 + 26); i++) {
+        char char_items = static_cast<char>(i);
+        int count = 0;
+        if (character.find(char_items) != std::string::npos) {
+            for (char k : character) {
+                if (k == char_items) {
+                    count++;
+                }
+            }
+        } else {
+            continue;
+        }
+        character.erase(std::remove(character.begin(), character.end(), char_items), character.end());
+        for (int m = 0; m < count; m++) {
+            result += char_items;
+        }
+        if (character.empty()) {
+            break;
+        }
     }
-    else if(b>6 || b<2){
-        cout<<max(a,c);
-    }
-    else if(c>6 || c<2){
-        cout<<max(a,c);
-    }
-    else {
-        cout<<max(max(b,c),a);
-    }
+    std::cout << result << std::endl;
     return 0;
 }
+
