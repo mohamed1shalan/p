@@ -1,0 +1,208 @@
+.body-contact{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 20px));
+    grid-template-rows: repeat(5 , 250px);
+    gap: 20px;
+}
+@media (max-width:1030px) {
+    .body-contact{
+        grid-template-columns: repeat(1,calc(100% - 20px));
+        grid-template-rows: repeat(10 , 250px);
+    }
+}
+:root{
+    --main-border: rgb(169 169 169 / 28%);
+    --color-font-2:rgb(42 37 37 / 46%);
+    --main-blue-color:rgb(89 89 249);
+}
+article:hover{
+    border-radius: 10px;
+    box-shadow: 0px -20px 20px #9a97970e, 0px 20px 20px #9a97970e;
+    z-index: 500;
+}
+.teamBox{
+    background-color: white;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    border-radius: 10px ;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.boxTitle{
+    font-size: 17px;
+    font-weight: 600;
+}
+.boxDec{
+    color: var(--color-font-2);
+    font-size: 13px;
+    padding: 5px 0 0;
+}
+.photoRank{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 60%;
+}
+.boxPhoto{
+    display: flex;
+    flex-direction: row;
+}
+.boxPhoto>img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition-duration: .4s;
+}
+.boxPhoto>img:nth-child(2){
+    transform: translateX(-10px);
+}
+.boxPhoto>img:nth-child(3){
+    transform: translateX(-20px);
+}
+.boxPhoto>img:nth-child(4){
+    transform: translateX(-40px);
+}
+.boxPhoto>img:nth-child(5){
+    transform: translateX(-50px);
+}
+.boxPhoto>img:hover{
+    z-index: 2;
+    margin-top: -10px;
+}
+.teamSkiles{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    height: fit-content;
+    padding: 10px 0;
+    border: 1px solid var(--main-border);
+    border-width: 1px 0 ;
+}
+
+.teamSkiles>p{
+    font-size: 13px;
+    padding: 5px 8px;
+    margin: 0 5px;
+    border-radius: 6px;
+    background-color: var(--main-border);
+}
+.teamRankPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.teamRankPrice>div:first-child{
+    width: 40%;
+    border-radius: 5px;
+    height: 8px;
+    background-color: var(--main-border);
+    position: relative;
+    overflow: hidden;
+}
+.teamRankPrice>div:first-child::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-blue-color);
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+}
+.mohamedApplication .teamRankPrice>div:first-child::after,
+.academyPortal .teamRankPrice>div:first-child::after{
+    width: 20%;
+    background-color: rgb(34, 197, 94);
+}
+.mohamedDashboard .teamRankPrice>div:first-child::after,
+.chattingApplication .teamRankPrice>div:first-child::after{
+    width: 50%;
+    background-color: rgb(254, 0, 0);
+}
+.mohamedPortal .teamRankPrice>div:first-child::after,
+.ahmedDashboard .teamRankPrice>div:first-child::after{
+    width: 70%;
+    background-color: rgb(38, 180, 208);
+}
+.ahmedApplication .teamRankPrice>div:first-child::after,
+.ahmedPortal .teamRankPrice>div:first-child::after{
+    width: 100%;
+    background-color: rgb(34, 197, 94);
+}
+.teamRankPrice>div:last-child{
+    color: rgba(0, 0, 0, 0.688);
+    padding: 0 8px;
+}
+.teamRankPrice>div:last-child>span{
+    color: rgba(0, 0, 0, 0.523);
+}
+.data-box{
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+}
+.data-box>div{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.532);
+    font-weight: 700;
+}
+.data-box>div:last-child{
+    font-size: 10px;
+    padding: 0 10px;
+    font-weight: 700;
+    text-align: center;
+}
+@media (max-width:390px) {
+    .body-contact{
+        grid-template-rows: repeat(10 , 310px);
+    }
+
+}
+
+@media (max-width:340px) {
+    .photoRank{
+        height: 70%;
+    }
+    .teamSkiles>p{
+        margin: 5px 5px;
+        font-size: 10px;
+    }
+    .boxPhoto>img{
+        width: 40px;
+        height: 40px;
+    }
+    .boxDec{
+        font-size: 10px;
+    }
+    .data-box>div{
+        display: none;
+    }
+    .teamRankPrice{
+        flex-direction: column;
+    }
+    .teamRankPrice>div:first-child{
+        width: 100%;
+    }
+    .teamRankPrice>div{
+        margin: 5px;
+    }
+
+}
