@@ -90,7 +90,7 @@ print("the reslt is", a, b, c, "hi")
 
 # print(list.insert(1))
 
-# print("are you want to enter a start and end number or use a deffult number (1,100)")
+print("are you want to enter a start and end number or use a deffult number (1,100)")
 # print("enter 1 to enter number ")
 # print("enter 2 to use a defult number ")
 # choise = int(input())
@@ -102,7 +102,6 @@ print("the reslt is", a, b, c, "hi")
 #     start = 1
 #     end =100
 # else
-import random
 
 # initializing list
 test_list = [1, 4, 5, 2, 7]

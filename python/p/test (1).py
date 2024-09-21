@@ -18,16 +18,29 @@ import math
 
 # # y = 1
 
+
 # def fun1(y, x):
 #     y *= 2
 #     x = 1
 #     return y, x
 
-# y1 = 0
-# print(fun1(1)*fun1(2))
+# list = [1, 2, 3, 5, 5, 6]
 
+# print(fun1(1, 2)*fun1(2, 4))
+# print("mohamed {:>10} ".format(123456))
+# y1 = 0
 # for i in range(1, 8, 2):
 
+
+x = 1
+y = 1
+for x in range(1, 11):
+    print('{:>4}'.format(x), end='')
+    while y <= 10:
+        print('{:>4}'.format(y*x), end='')
+        y += 1
+    print()
+    y = 1
 # y1 += fun1(i)
 
 # print(y1)
