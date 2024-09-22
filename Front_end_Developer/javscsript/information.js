@@ -1095,3 +1095,30 @@ list_In_html.forEach(function(elle){
     })
   }
 })
+// Higher order Function Challenge 
+
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+let solution_reduce ='?????';
+let solution_map ='?????';
+let solution_filter ='?????';
+solution_reduce = myString.split(',').reduce(function(return_,curr){
+  return curr == '_'?return_+=' ':isNaN(curr) ?return_+=curr: return_;
+},'')
+
+console.log('reduce'); // Elzero Web School
+console.log(solution_reduce); // Elzero Web School
+
+solution_filter = myString.split(',').filter(function(ele){
+  return isNaN(ele) 
+}).join('').replaceAll('_',' ')
+
+console.log('filter'); // Elzero Web School
+console.log(solution_filter); // Elzero Web School
+let solution_map_string = ' '
+solution_map = myString.split(',').map(function(ele){
+  return isNaN(ele) ? ele : ele == "_" ? ' ':""; 
+}).join('')
+console.log('map'); // Elzero Web School
+console.log(solution_map); // Elzero Web School
+
+// make (Reduce , filter , map) in one 
