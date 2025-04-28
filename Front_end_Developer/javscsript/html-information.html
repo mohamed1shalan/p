@@ -10,21 +10,30 @@
   <body>
     <input type="text" id="a1" onblur="getval()" />
     <p id="show">Show</p>
-    <p>number 1<input id="one1" type="text" /></p>
-    <p>number 2<input id="one2" type="text" /></p>
-    <button onclick="start()">ok</button>
-    <p>sum <input id="sum" value="" /></p>
-    <p>--- <input id="-sum" /></p>
-    <p>--- <input id="product" type="text" /></p>
-    <ul >
-      <li class="active">one</li>
-      <li>two</li>
-      <li>there</li>
+    <form action="">
+      <label for="one1">first number</label>
+      <input id="one1" type="text" />
+      <label for="one2">first number</label>
+      <input id="one2" type="text" />
+      <input type="button"onclick="start()" value="Submit">
+      <br>
+      <label for="one2">Sum</label>
+      <input id="sum" value="" />
+      <label for="one2">dev</label>
+      <input id="-sum" />
+      <label for="one2">*</label>
+      <input id="product" type="text"/>
+   
+    <ul>
+      <li class="active">One</li>
+      <li>Two</li>
+      <li>Three</li>
     </ul>
-    <div class="continer">
-      <div>Div 1</div>
-      <div>Div 2</div>
-      <div>Div 3</div>
+      
+    <div class="content">
+      <div>Div One</div>
+      <div>Div Two</div>
+      <div>Div Three</div>
     </div>
     <script src="information.js"></script>
   </body>

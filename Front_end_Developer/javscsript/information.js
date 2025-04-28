@@ -245,7 +245,7 @@ console.log((Math.trunc(b) * a) / 2); // 10000
 // Get Integer "2" From d Variable With 4. Methods
 console.log(Math.round(d));
 console.log(Math.floor(d));
-console.log(Math.trunc(d));
+console.log(Math.trunc(d));  
 console.log(Number(d.toFixed(0)));
 // Use Variables b + d To Get This Values
 console.log((Math.trunc(b) / 3).toFixed(2)); // 66.67 => String
@@ -528,7 +528,7 @@ switch (day) {
   default:
     console.log("Unknown Day");
     break;
-}
+} 
 //-------------- switch statment challenge--------//
 let job = "Manger";
 let salery = 0;
@@ -678,7 +678,7 @@ console.log(myfriend1);
 // splice >> splice( start, number element you well delete, elment you wont to add)
 myfriend1.splice(0, 0, "Mohamed", "Ahmad");
 console.log(myfriend1);
-myfriend1.splice(1, 4, "Mohamed", "Ahmad");
+myfriend1.splice(0, 0, "Mohamed", "Ahmad");
 console.log(myfriend1);
 
 let allFreind = myfriend1.concat(myfriend, 1, [2552, "sayed"]);
@@ -896,12 +896,15 @@ function showinfo(
       for (i = 0; i < skiles.length; i++) {
         document.write(`<p>----${skiles[i]}</p>`);
       }
-    } else {
+    }
+    else {
       document.write(`<p>--shiles: No skiles</p>`);
     }
-  } else {
+  } 
+  else {
     console.log("     <p>--skiles is hidden</p>");
   }
+
   document.write(`</div>`);
 }
 
@@ -971,7 +974,6 @@ function parent(){
     console.log(a);
     function grand(){
     
-      
     }
   }
   chiled();
@@ -1057,7 +1059,7 @@ let Reduc_1 = nums_reduce.reduce(function(return_number , current , index,arr){
   console.log(return_number + current);
   console.log(`#############`);
   return return_number + current;
-},5)
+})
 
 console.log(Reduc_1)
 // challenge 
@@ -1121,4 +1123,47 @@ solution_map = myString.split(',').map(function(ele){
 console.log('map'); // Elzero Web School
 console.log(solution_map); // Elzero Web School
 
-// make (Reduce , filter , map) in one 
+// ForEach
+// not make a new array
+// this is make a operation in the same array
+// this make a operation in all element in array
+// this is not return a new array
+// this is not return a value
+// بيطبق على كل عنصر فى الاراى و بيعمل عليه عملية معينة
+
+let foreach_list = document.querySelectorAll("ul li");
+
+foreach_list.forEach(function(ele) {
+  ele.onclick = function () {
+    foreach_list.forEach(function(ele) {
+      ele.classList.remove("active");
+    });
+    this.classList.add("active");
+  };
+});
+
+
+/////  object
+
+let user_myObject = {
+  thename: "Mohamed",
+  theage: 20,
+  country: "Egypt",
+  //methods
+  sayHallo: function () {
+    return `Hallo ${this.thename}`;
+  },
+};
+console.log(user_myObject.thename);
+console.log(user_myObject.theage);
+console.log(user_myObject.sayHallo());
+
+let myVar = "country";
+let user = {
+theName: "Osama",
+country: "Egypt",
+};
+console.log(user.theName);
+console.log(user.country); // user.country
+console.log(user.myVar); // user.country
+console.log(user [myVar]); // user.country
