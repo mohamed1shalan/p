@@ -1,49 +1,58 @@
-print("mohamed", "programing")
+import time
 
-if "m" in "mohamed":
-    print('oh')
-    print("d")
+tasks = []
 
-#   type()
-#   comment in python ###
-#
-#
-#----------type of result data type ----------------------
-print(type(10))  #  >> integar
-print(type(100.9))  # >> float
-print(type("mohamed"))  # >> sting
-print(type([1, 2, 3, 4, 5, 6]))  # >> list
-print(type((1, 2, 3, 4, 5, 6)))  # >> Tuple
-print(type({"mohaed": 1, "ahmad": 2}))  # >> dictionary
-print(type(10 == 10))  # >> bollian
-#-----------------------------
-_myname = "mohamed"
-print(_myname * 2)
-#---------------------------
-x = "hallo"
-x = 10
-print(x == 10)
-a, b, c, = 10, 10, 20
-help("keywords")
-# -----------------------some spacifc of \--------------------------
-c = "\b"  # remove d in mohamed
-print(f"mohamed{c}shalan")
+def add_task():
+    name = input("أدخل اسم المهمة: ")
+    duration = int(input("كم دقيقة تحتاج لتنفيذها؟ "))
+    tasks.append({"name": name, "duration": duration})
+    print(f"✅ تم إضافة المهمة: {name} ({duration} دقيقة)")
 
-# (\)scape new line or( '' "") and more
-# exapmple
-print("mohahmed \
-shalan")
-print("mohamed \\ shalan")  #to print \
-print("\"mohamed \\ shalan\"")  #to print ""
+def show_tasks():
+    if not tasks:
+        print("📭 لا توجد مهام حالياً.")
+        return
+    print("\n📋 قائمة المهام:")
+    for i, task in enumerate(tasks, 1):
+        print(f"{i}. {task['name']} - {task['duration']} دقيقة")
 
-# (\n) line break
-print("mohamed\nshalan")
-# (\r) carriage return #remove many <<\r = >>\r and print \r first
-print("abcdefgh\rmohamed")
-#------ step of \r ----
-#      mohamed  abcdefgh
-#      1234567  12345678  number of data
-#output  mohamedh
+def start_task():
+    if not tasks:
+        print("📭 لا توجد مهام لبدء تنفيذها.")
+        return
+    show_tasks()
+    choice = int(input("اختر رقم المهمة لبدء تنفيذها: ")) - 1
+    if 0 <= choice < len(tasks):
+        task = tasks[choice]
+        print(f"🚀 بدء المهمة: {task['name']} ({task['duration']} دقيقة)")
+        for i in range(task['duration'], 0, -1):
+            print(f"⏳ متبقي: {i} دقيقة", end="\r")
+            time.sleep(60)  # 60 ثانية لكل دقيقة
+        print(f"\n✅ تم الانتهاء من المهمة: {task['name']}")
+        tasks.pop(choice)
+    else:
+        print("❌ رقم غير صحيح.")
 
-# (\t) herosental tab
-print("mohamed\tshalan")  # mohamed  shalan
+def main():
+    while True:
+        print("\n--- منظم الوقت ---")
+        print("1. إضافة مهمة")
+        print("2. عرض المهام")
+        print("3. بدء تنفيذ مهمة")
+        print("4. خروج")
+        choice = input("اختر رقم: ")
+        
+        if choice == "1":
+            add_task()
+        elif choice == "2":
+            show_tasks()
+        elif choice == "3":
+            start_task()
+        elif choice == "4":
+            print("👋 إلى اللقاء!")
+            break
+        else:
+            print("❌ خيار غير صحيح.")
+
+if __name__ == "__main__":
+    main()
