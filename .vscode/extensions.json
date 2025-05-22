@@ -3,6 +3,9 @@
         "esbenp.prettier-vscode",
         "coenraads.bracket-pair-colorizer-2",
         "jeremyrajan.react-component",
-        "2gua.rainbow-brackets"
+        "2gua.rainbow-brackets",
+        "formulahendry.code-runner",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes"
     ]
 }

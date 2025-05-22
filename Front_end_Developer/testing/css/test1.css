@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+}
+.container{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+.different-color{
+    position: relative;
+    width: fit-content;
+    height: 36px;
+}
+.different-color img{
+}
+.different-color::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: aliceblue;
+    width: 5px;
+    height: 100%;
+    z-index: 2;
+    animation: move 5s linear;
+    animation-iteration-count:infinite;
+    mix-blend-mode: difference;
+
+}
+@keyframes move {
+    0%,100%{
+        width: 0px;
+    }
+    50%{
+        width: 112px;
+    }
+}

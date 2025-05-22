@@ -1,0 +1,412 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --color-font-2:rgba(0, 0, 0, 0.652);
+    --main-blue-color:rgb(89 89 249);
+}
+*{
+    
+    transition-duration: 0.2s;
+}
+*::-webkit-scrollbar{
+    background: white;
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb{
+    background: var(--main-background);
+}
+.body-contact{
+    padding: 30px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 20px));
+    grid-template-rows: repeat(3,350px);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:700px){
+    .body-contact{
+    grid-template-columns: repeat(1,95%);
+    grid-template-rows: repeat(6,350px);
+    gap: 20px;
+    }
+}
+.c-total{
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    border-radius: 15px;
+    transition-duration:0.2s;
+    
+}
+.container{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100% - 30px);
+}
+@media (max-width:400px) {
+    .container{
+        padding: 15px 10px;
+}
+}
+article:hover{
+    border-radius: 10px;
+    box-shadow: 0px -20px 20px #9a97970e, 0px 20px 20px #9a97970e;
+    z-index: 500;
+
+}
+.title-of-c p:first-child{
+    font-size: 25px;
+    font-weight: 600;
+}
+.disc{
+    padding: 5px 0;
+    color: var(--color-font-2);
+    font-size: 13px;
+}
+.web-control-on-of{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+}
+.web-cont-on-off-disc
+.contant{
+    height: 80%;
+}
+.c1-contant{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    height: 80%;
+
+}
+.desc-botom{
+    color: var(--color-font-2);
+    padding: 5px 0;
+    
+}
+.web-control-on-of{
+    padding: 5px 0 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.name-botom{
+    font-weight: 500;
+}
+.c1-contant textarea{
+    padding: 10px;
+    font-size: 16px;
+    height: 60%;
+    border: 2px solid var(--main-background);
+    border-radius: 15px;
+    overflow: hidden;
+    resize: none;
+    outline: none;
+    box-shadow: 0px 0px 20px var(--main-background) ;
+}
+.c1-contant textarea:focus-visible{     
+    border-radius: 5px;
+}
+.botom-control{
+    width: 65px;
+    height: 25px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.botom-control::after{
+    content:"\f00d";
+    font: var(--fa-font-solid);
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    background-color:var(--main-blue-color);
+    color: white;
+    right: 60%;
+    transition: 0.4s;
+    transform: translate(-10%,-50%);
+    position: absolute;
+
+}
+.botom-control{
+    background-color: aliceblue;
+    transition: 0.4s;
+    
+}
+.botom-checkbox:checked + .botom-control{
+    background-color: var(--main-blue-color);
+}
+.botom-checkbox:checked + .botom-control::after{
+    content:"\f00c";
+    right: 2%;
+    background-color:white;
+    color: var(--main-blue-color);
+    transition: 0.4s;
+}
+.botom-checkbox{
+    --webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.input-f label{
+    display: flex;
+    flex-direction: column;
+}
+.input-f form label{
+    display: flex;
+    flex-direction: column;
+}
+.input-f{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input-f label input{
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    border-radius: 4px;
+}
+.input-f label{
+    display: flex;
+    flex-direction: column;
+}
+.input-f label p{
+    padding: 10px 0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.588);
+}
+.email-chick{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.input-f label:last-child p:last-child{
+    color: var(--main-blue-color);
+    font-size: 17px;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.input-f label:last-child input{
+    width: 80%;
+}
+.contant{
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    align-items: stretch;
+}
+form{
+    height: calc(100%- 50px);
+    display: flex;
+    flex-direction: column;
+}
+/* ////////// c3 security box */
+.secu-info .contant{
+    display: flex;
+    justify-content: space-around;
+}
+.secu-box{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-background);
+    padding: 10px 0;
+    align-items: center;
+}
+.secu-box p:last-child{
+    padding: 10px 0px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.412);
+}
+.device-box{
+    border: 0;
+}
+.device-box .active-way a{
+    padding: 8px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.password-box .active-way a{
+    background-color: var(--main-blue-color);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.password-box .active-way a:hover{
+    background-color: blue;
+}
+.device-box .active-way a:hover{
+    background-color: rgb(237, 237, 237);
+}
+.social-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-background);
+    justify-content: space-around;
+}
+.social-box i{
+    padding: 10px 15px;
+}
+.social-box input{
+    width: 90%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding-left: 10px;
+    border-left: 1px solid;
+    font-size: 14px;
+    border-left: 2px solid var(--main-background);
+}
+.social-box input:focus{
+    color: aquamarine;
+}
+.social-box:nth-child(1) i ,.social-box:nth-child(1) input:focus{
+    color:rgb(29, 161, 242);
+}
+.social-box:nth-child(2) i,.social-box:nth-child(2) input:focus{
+    color: rgb(6, 113, 225);
+}
+.social-box:nth-child(3) i, .social-box:nth-child(3) input:focus{
+    color: rgb(0, 119, 181);
+}
+.social-box:nth-child(4) i,.social-box:nth-child(4) input:focus{
+    color: rgb(254, 0, 0);
+}
+.wid-controle{
+    display: grid;
+    grid-template-columns: 1.2em auto;
+    gap: 0.5em;
+}
+.wid-controle input[type="checkbox"]{
+    display: grid;
+    place-content: center;
+    width: 1.2em;
+    height: 1.2em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+.wid-controle input[type="checkbox"]::before {
+    content: "";
+    width: 0.7em;
+    height: 0.7em;
+    transform: scale(0);
+    /* ...existing styles */
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-blue-color);
+}
+.wid-controle input[type="checkbox"]:checked:before{
+    transform: scale(1);
+    border-radius: 0.05em;
+}
+.c6-contant{
+    justify-content: space-between;
+}
+
+.backupTime>div>input{
+    
+    place-content: center;
+    width: 1.2em;
+    height: 1.2em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    
+    background-color: #fff;
+    margin: 0;
+}
+.backupTime>div{
+    display: flex;
+}
+
+.backupTime>div>label{
+    padding: 0 0 0 5px;
+}
+.backupTime{
+display: flex;
+    height: calc(100% - 80px);
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly
+}
+.formMegamanBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.formMegamanBox>div{
+    display: flex;
+    align-items: center;
+
+border-radius: 6px;
+}
+.formMegamanBox>div{
+    width:30%;
+    position: relative;    
+
+}
+.formMegamanBox>div>input{
+    top: 0;
+    position: absolute;
+    appearance: none;
+    border:5px solid transparent ;
+} 
+.formMegamanBox>div>input[type='radio']:checked + label>p,
+.formMegamanBox>div>input[type='radio']:checked + label>i{
+    color: rgb(89, 89, 249);
+}
+.formMegamanBox>div>input[type='radio']:checked + label
+{
+    border:2px solid rgba(89, 89, 249, 0.533);
+}
+.formMegamanBox>div>input[type='radio']:hover + label {
+    border-color: rgba(89, 89, 249, 0.533);
+}
+.megamanBox{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 0;
+    border-radius: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.329);
+}
+
+.megamanBox>p{
+    padding: 5px 0 0 0;
+}

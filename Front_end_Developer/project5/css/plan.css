@@ -1,0 +1,137 @@
+:root{
+    --main-border: rgb(169 169 169 / 28%);
+    --color-font-2:rgb(42 37 37 / 46%);
+    --main-blue-color:rgb(89 89 249);
+    --main-background:rgb(241, 245, 249);
+    --padding-box-in-dashboard:20px;
+}
+.body-contact{
+    display: grid;
+    gap: 25px;
+
+    width:  calc(100% - 15px);
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+}
+article{
+    border-radius: 15px;
+    height: 740px;
+    background-color: white;
+}
+article:hover{
+    border-radius: 10px;
+    box-shadow: 0px -20px 20px #9a97970e, 0px 20px 20px #9a97970e;
+    z-index: 500;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.stateCost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(21, 211, 21);
+    color:white;
+    border-radius: 5px;
+    border:5px solid white;
+    outline: 5px solid rgb(21, 211, 21);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.stateCost2{
+    outline-color: var(--main-blue-color);
+    background-color: var(--main-blue-color);
+}
+.stateCost3{
+    outline-color: red;
+    background-color: red;
+}
+.stateCost>p{ 
+    padding: 5px;
+    font-size: 25px;
+    color: inherit; 
+}
+.stateCost>p:last-child{
+    position: relative;
+    font-size: 50px;
+}
+.stateCost>p:last-child::before{
+    content:"$";
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    transform: translateX(-100%);
+}
+.spacificContainer{
+    display: flex;
+    flex-direction: column;
+}
+.spacifc{
+    display: flex;
+    border-bottom: 1px solid var(--main-border);
+    padding: 15px  0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.spacifc .det{
+    display: flex;
+    color: inherit;
+    align-items: center;
+}
+.spacifc .det>i{
+    color: inherit;
+    margin-right: 10px;
+}
+.spacifc>i:last-child{
+    cursor: pointer;
+}
+.spacifc .det>p{
+    font-size: 16px;
+}
+.submit{
+    padding: 5px 10px;
+    color: white;
+    margin: 25px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    background-color: rgb(21, 211, 21);
+}
+@media (max-width:500px) {
+    .body-contact{
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    }
+    article{
+        height: fit-content;
+    }
+}
+@media (max-width:350px) {
+    .spacifc .det>p{
+        font-size: 13px;
+    }
+}
+.plane1 .spacifc{
+    color: rgb(21, 211, 21);
+}
+.plane2 .spacifc{
+    color: var(--main-blue-color);
+}
+.plane3 .spacifc{
+    color: red;
+}
+.spacificContainer1 .submit{
+    background-color: rgb(21, 211, 21);
+}
+.spacificContainer2 .submit{
+    background-color: var(--main-blue-color);
+}
+.spacificContainer3 .submit{
+    background-color: red;
+}
+
+.det .redColor{
+    color: red;
+}

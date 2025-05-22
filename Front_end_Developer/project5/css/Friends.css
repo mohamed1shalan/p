@@ -1,0 +1,169 @@
+:root{
+    --main-border: rgb(169 169 169 / 28%);
+    --color-font-2:rgb(42 37 37 / 46%);
+    --main-blue-color:rgb(89 89 249);
+    --main-background:rgb(241, 245, 249);
+    --padding-box-in-dashboard:20px;
+}
+article:hover{
+    border-radius: 10px;
+    box-shadow: 0px -20px 20px #9a97970e, 0px 20px 20px #9a97970e;
+    z-index: 500;
+}
+.body-contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    height:100%;
+    gap: 20px;
+}
+
+article{
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.callUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100;
+}
+.callUser>a{
+    background-color: var(--main-border);
+    padding: 6px;
+    border-radius: 50%;
+    margin: 5px ;
+}
+.callUser>a:hover>i{
+    color: var(--main-blue-color);
+}
+article:hover .callUser>a{
+    border-radius: 10px;
+}
+.container{
+    height:calc(100% - 20px) ;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.genralInformatinFriend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55%;
+}
+.genralInformatinFriend>img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+.nameFriend{
+    padding: 10px 0 ;
+    font-weight:600;
+}
+.jobFriend{
+    color: var(--color-font-2);
+    font-size: 14px;
+}
+.socialInformationFriend{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height:35%;
+    border:1px solid var(--main-border);
+    border-width: 1px 0 ;
+}
+.socialRate{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.numberFriend,.numberProject,.numberArtical{
+    display: flex;
+    align-items: center;
+}
+.socialRate>div>i{
+    font-size: 12px;
+    padding:  0 5px 0 0;
+}
+.socialRate>div>p{
+    font-size: 0.95em;
+}
+.socialState a{
+    font-size: 45px;
+    color: rgba(255, 255, 24, 0.336);
+    font-weight: 600;
+    padding: 0 10px 0 0;
+}
+.socialState>a:hover{
+    color: #3535ffd1;
+}
+
+/*  */
+.activeProfile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+}
+.lastActiveFriend{
+    font-size: 10px;
+    color: var(--color-font-2);
+}
+.activeProfile>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.activeProfile>div:last-child>a{
+    background-color: var(--main-blue-color);
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px ;
+}
+.activeProfile>div:last-child>a:last-child{
+    background-color: red;
+}
+@media (max-width:350px) {
+    .body-contact{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }   
+} 
+@media (max-width:290px) {
+    .activeProfile{
+        flex-direction: column-reverse;
+    }
+    .activeProfile{
+        margin: 5px;
+    }
+    article{
+        height: 450px;
+    }
+    .socialInformationFriend{
+        height: 30%;
+        align-items: flex-start;
+    }
+    .socialState{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+    .activeProfile{
+        height: 15%;
+        justify-content: space-evenly;
+    }
+
+}

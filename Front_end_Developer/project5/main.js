@@ -1,0 +1,34 @@
+const now = new Date();
+const year = now.getUTCFullYear();
+const mounth = now.getMonth();
+const day = now.getDay();
+const Hours = now.getHours();
+const Minutes = now.getMinutes();
+let cardyear = `${day}/${mounth}/${year}`;
+// var lastActionYear = document.getElementById("lastActionyear");
+// lastActionYear.innerHTML = cardyear;
+let cardday = `${Hours}h : ${Minutes}m`;
+// var lastActionday = document.getElementById("lastActionday");
+// lastActionday.innerHTML = cardday;
+
+// var lastActionday = document.getElementsById("lastActionday");
+let card = cardyear;
+window.onload = document.getElementById("lastActionday1").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday2").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday3").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday4").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday5").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday6").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday7").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday8").innerHTML = cardday;
+window.onload = document.getElementById("lastActionday9").innerHTML = cardday;
+//==============================================================
+window.onload = document.getElementById("lastActionyear1").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear2").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear3").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear4").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear5").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear6").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear7").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear8").innerHTML = cardyear;
+window.onload = document.getElementById("lastActionyear9").innerHTML = cardyear;

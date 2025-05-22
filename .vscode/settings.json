@@ -1,12 +1,49 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "bracket-pair-colorizer-2.activeScopeCSS": [
-        "borderStyle : solid",
-        "borderWidth : 1px",
-        "borderColor : {color}",
-        "opacity: 0.5"
-    ],
-    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    // إعدادات عامة
     "editor.fontSize": 14,
-    "python.formatting.provider": "yapf"
+    "editor.fontFamily": "'Cascadia Code', 'Courier New', monospace",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    
+    // إعدادات الترميز واللغة
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.tabSize": 4
+    },
+    
+    // إعدادات Terminal المتقدمة
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontFamily": "Cascadia Code",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.defaultEncoding": "utf8",
+    "terminal.integrated.detectLocale": "off",
+    "terminal.integrated.shellArgs.windows": [
+        "-NoExit",
+        "-Command",
+        "chcp 65001 | Out-Null"
+    ],
+    
+    // إعدادات Python
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.terminal.launchArgs": ["-X", "utf8"],
+    "python.envFile": "${workspaceFolder}/.env",
+    
+    // إعدادات Code Runner
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "python": "python -u",
+    },
+    "code-runner.saveFileBeforeRun": true,
+    
+    // إعدادات إضافية للعربية
+    "[plaintext]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false
+    },
+    "editor.unicodeHighlight.allowedLocales": {
+        "ar": true
+    }
 }

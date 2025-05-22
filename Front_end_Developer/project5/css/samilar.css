@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    text-decoration-line: none;
+    color: black;
+}
+*{
+    
+    transition-duration: 0.2s;
+}
+*::-webkit-scrollbar{
+    background: white;
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb{
+    background: var(--main-border);
+}
+:root{
+    --main-border: rgb(169 169 169 / 28%);
+    --color-font-2:rgb(42 37 37 / 46%);
+    --main-blue-color:rgb(89 89 249);
+    --main-background:rgb(241, 245, 249);
+    --padding-box-in-dashboard:20px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    width: calc(100% - 20px);
+    overflow: auto;
+    font-family:sans-serif;
+    margin: 5px 0;
+    padding: 0 10px ;
+}
+html{
+    overflow: hidden;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x:hidden ;
+}
+.body-contact{
+    width: 100%;
+    height: 100%;
+    margin: 30px 5px 35px 0;
+}
+@media (max-width:400px) {
+    html{
+        overflow: hidden;
+        padding: 0 5px 0 ;
+    }   
+}
+
+.p-name{
+    width: fit-content;
+    padding: 15px 0 0 10px ;
+}
+
+.tiltle-of-iframe-page{
+    margin: 0;
+}
+.tiltle-of-iframe-page{
+    font-size: 33px;
+    font-weight: 600;
+    position: relative;
+}
+.tiltle-of-iframe-page::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 8%;
+    background-color:white;
+    border-left: 40px solid black;
+}
