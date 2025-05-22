@@ -2,11 +2,13 @@ import time
 
 tasks = []
 
+
 def add_task():
     name = input("أدخل اسم المهمة: ")
     duration = int(input("كم دقيقة تحتاج لتنفيذها؟ "))
     tasks.append({"name": name, "duration": duration})
     print(f"✅ تم إضافة المهمة: {name} ({duration} دقيقة)")
+
 
 def show_tasks():
     if not tasks:
@@ -15,6 +17,7 @@ def show_tasks():
     print("\n📋 قائمة المهام:")
     for i, task in enumerate(tasks, 1):
         print(f"{i}. {task['name']} - {task['duration']} دقيقة")
+
 
 def start_task():
     if not tasks:
@@ -33,6 +36,7 @@ def start_task():
     else:
         print("❌ رقم غير صحيح.")
 
+
 def main():
     while True:
         print("\n--- منظم الوقت ---")
@@ -41,7 +45,7 @@ def main():
         print("3. بدء تنفيذ مهمة")
         print("4. خروج")
         choice = input("اختر رقم: ")
-        
+
         if choice == "1":
             add_task()
         elif choice == "2":
@@ -53,6 +57,7 @@ def main():
             break
         else:
             print("❌ خيار غير صحيح.")
+
 
 if __name__ == "__main__":
     main()
