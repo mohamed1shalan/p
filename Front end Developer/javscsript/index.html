@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="main_head">hallo<span id="user_name"></span>moahmed</h1>
+    <h2>shalan</h2> -->
+    <!-- <p title="moahmed shalan"></p> -->
+    <script>
+      // this is to make a pascal triangle and save this in array
+      var list = [1],
+        list1 = [],
+        listFinal = [],
+        x = 1,
+        finalresultlist = [],
+        finalresult = [],
+        numberLine,
+        classNamePascal = "class";
+      function mo(x) {
+        numberLine = x;
+        for (let i = 0; i < numberLine; i++) {
+          // 3
+          for (let j = 0; j <= i; j++) {
+            // < 2
+            if (i == 0) {
+              list1 = [1];
+            } else if (i == 1) {
+              list1 = [1, 1];
+            } else {
+              if (j == 0 || j == i) {
+                list1[j] = 1;
+              } else {
+                list1[j] = list[j - 1] + list[j];
+              }
+            }
+          }
+          listFinal[i] = list1.join(" | ");
+          list = list1;
+          list1 = [];
+          finalresult.push(
+            `<p class="${classNamePascal} ${classNamePascal}${i}"style='box-shadow: 0 0 20px 0px darkgrey;width:fit-content;margin:5px auto;white-space: nowrap;overflow:auto;background:#afccf8;'>${listFinal[i]}</p>`
+          );
+        }
+        return `${finalresult.join("")}`;
+      }
+      let mo1 = mo(prompt("Enter Number of lines"));
+      document.write(
+        `<div style="display:flex;flex-direction:column;align-items:center;width:fit-content;margin:auto;"><p style='font-family: system-ui;font-size:30px;margin: 10px 0 20px 0;'>Mohamed Shalan</p>${mo1}</div>`
+      );
+    </script>
+  </body>
+</html>

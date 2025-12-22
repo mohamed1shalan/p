@@ -18,62 +18,83 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="leftbar">
+    <header>
+      <div class="search-box">
+        <input
+          class=""
+          type="text"
+          name="search"
+          placeholder="     Type A Keyword"
+        />
+      </div>
+      <div class="title">Shalan</div>
+      <div class="user-box">
+        <i class="fa-regular fa-bell"></i>
+        <img src="image/avatar.jpg" alt="" />
+      </div>
+    </header>
+    <aside class="leftbar">
       <div class="title">Shalan</div>
       <ul class="leftbar-mainue">
         <li>
-          <a href="">
+          <a class="dashboard-link" target="iframe" href="Dashboard.html">
             <i class="fa-regular fa-chart-bar fa-fw"></i>
             <p>Dashboard</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a  class="settings-link" target="iframe" href="Settings.html">
             <i class="fa-solid fa-gear fa-fw"></i>
             <p>Settings</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a class="profile-link" target="iframe" href="Profile.html">
             <i class="fa-regular fa-user fa-fw"></i>
             <p>Profile</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a class="project-link" target="iframe" href="Project.html">
             <i class="fa-solid fa-diagram-project fa-fw"></i>
             <p>Project</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a target="iframe" href="Courses.html">
             <i class="fa-solid fa-graduation-cap fa-fw"></i>
             <p>Courses</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a target="iframe" href="Friends.html">
             <i class="fa-regular fa-circle-user fa-fw"></i>
             <p>Friends</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a target="iframe" href="Files.html">
             <i class="fa-regular fa-file fa-fw"></i>
             <p>Files</p>
           </a>
         </li>
         <li>
-          <a href="">
+          <a target="iframe" href="plan.html">
             <i class="fa-regular fa-credit-card fa-fw"></i>
             <p>Plans</p>
           </a>
         </li>
       </ul>
-    </div>
-    <div class="home">
-      <div class="tp-bar"></div>
-      <div class="home-bar"></div>
-    </div>
+    </aside>
+    <article class="home">
+      <iframe
+        name="iframe"
+        scrolling="auto"
+        src="Dashboard.html"
+        frameborder="0"
+      >
+      </iframe>
+    </article>
+    </main>
   </body>
 </html>
