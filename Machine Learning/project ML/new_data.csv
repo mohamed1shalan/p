@@ -1,3 +1,0 @@
-Month,DayofMonth,DayOfWeek,DepTime,CRSDepTime,ArrTime,CRSArrTime,FlightNum,ActualElapsedTime,CRSElapsedTime,AirTime,ArrDelay,DepDelay,Distance,TaxiIn,TaxiOut,Cancelled,CancellationCode,CarrierDelay,WeatherDelay,NASDelay,SecurityDelay,LateAircraftDelay,UniqueCarrier,Origin,Dest
-1,10,3,1230,1200,1400,1330,1001,90,80,60,30,15,300,5,10,0,A,5,0,10,0,15,AA,JFK,ORD
-2,15,5,845,830,1000,945,2020,75,70,55,-10,0,450,4,12,0,B,0,0,5,0,5,DL,LAX,ATL

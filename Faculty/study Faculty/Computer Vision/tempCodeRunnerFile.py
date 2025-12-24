@@ -1,0 +1,10 @@
+img = cv2.imread("C:\\VS code Clone\\p\\study Faculty\\image.jpg")
+# laplacian = cv2.Laplacian(img, cv2.CV_64F)
+# plt.subplot(121)
+# plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+# plt.title('Original Image')
+# plt.subplot(122)
+# plt.imshow(laplacian, cmap='gray')
+# plt.title('Laplacian Image')
+# plt.show()
+
