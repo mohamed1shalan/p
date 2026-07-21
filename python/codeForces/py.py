@@ -40,18 +40,31 @@
 
 # -------------------------------------------------------
 # Codeforces 580A – Kefa and First Steps
-n = int(input())
-arr = list(map(int, input().split()))
+# n = int(input())
+# arr = list(map(int, input().split()))
 
-current = 1
-answer = 1
+# current = 1
+# answer = 1
 
-for i in range(1, n):
-    if arr[i] >= arr[i-1]:
-        current += 1
-    else:
-        current = 1
-    answer = max(answer, current)
+# for i in range(1, n):
+#     if arr[i] >= arr[i-1]:
+#         current += 1
+#     else:
+#         current = 1
+#     answer = max(answer, current)
 
-print(answer)
+# print(answer)
 # -------------------------------------------------------
+# Codeforces 476A – Dreamoon and Stairs
+# import math
+# n, m = map(int, input().split())
+
+# if n == 0 or m == 0 or n < m:
+#     print(-1)
+# elif n == m:
+#     print(m)
+# else:
+#     for i in range(math.ceil(n/2), n+1):
+#         if i % m == 0:
+#             print(i)
+#             break
